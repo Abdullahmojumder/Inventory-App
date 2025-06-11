@@ -1,0 +1,13 @@
+<h1><%= category.name %></h1>
+<p><%= category.description || 'No description provided.' %></p>
+<a href="/categories/<%= category.id %>/edit">Edit</a>
+<h2>Items in this Category</h2>
+<% if (items.length === 0) { %>
+  <p>No items in this category.</p>
+<% } else { %>
+  <ul>
+    <% items.forEach(item => { %>
+      <li><a href="/items/<%= item.id %>"><%= item.name %></a></li>
+    <% }); %>
+  </ul>
+<% } %>

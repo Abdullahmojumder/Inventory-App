@@ -1,0 +1,19 @@
+{
+  "name": "inventory-app",
+  "version": "1.0.0",
+  "description": "Inventory management app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "express-ejs-layouts": "^2.5.1",
+    "pg": "^8.13.0"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}

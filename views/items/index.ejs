@@ -1,0 +1,16 @@
+<h1>Items</h1>
+<a href="/items/new">Add New Item</a>
+<% if (items.length === 0) { %>
+  <p>No items found.</p>
+<% } else { %>
+  <ul>
+    <% items.forEach(item => { %>
+      <li>
+        <a href="/items/<%= item.id %>"><%= item.name %></a> (Category: <%= item.category_name || 'None' %>)
+        <form action="/items/<%= item.id %>/delete" method="POST" style="display:inline;">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+<% } %>

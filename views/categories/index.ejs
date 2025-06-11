@@ -1,0 +1,16 @@
+<h1>Categories</h1>
+<a href="/categories/new">Add New Category</a>
+<% if (categories.length === 0) { %>
+  <p>No categories found.</p>
+<% } else { %>
+  <ul>
+    <% categories.forEach(category => { %>
+      <li>
+        <a href="/categories/<%= category.id %>"><%= category.name %></a>
+        <form action="/categories/<%= category.id %>/delete" method="POST" style="display:inline;">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+<% } %>
